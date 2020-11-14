@@ -1,14 +1,15 @@
 import React from 'react';
 import { Text, ScrollView } from 'react-native';
 import style from './style';
-import Header from '../Header'
+import Header from '../Header';
+import ProductList from '../ProductList';
 
-const Home = () => {
+const Home = ({navigation}) => {
     return(
         <>
             <Header />
             <ScrollView style={style.container}>
-                <Text>Home - DC</Text>
+               <ProductList navigation={navigation}/>
             </ScrollView>
         </>
     );

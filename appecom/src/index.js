@@ -4,6 +4,7 @@ import style from './style'
 import { colors } from './styles'
 import BottonTab from './components/Tab'
 import { NavigationContainer } from '@react-navigation/native'
+import HomeStack from './routes/route'
 
 const AppECom = () => {
     return (

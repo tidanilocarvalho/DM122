@@ -1,18 +1,17 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
-import ProductList from '..';
 import style from './style';
 
-const Product = () => {
+const Product = ({navigation, product}) => {
     return(
         <View style={style.container}>
-            <TouchableOpacity>
+            <TouchableOpacity key={product.id}>
                 <Icon name='ios-checkmark-circle-outline' size={24} style={style.checkIcon}/>
-                <Image source={} style={style.image}/>
+                <Image source={{uri: product.image}} style={style.image}/>
                 <View>
-                    <Text style={style.description}>Description</Text>
-                    <Text style={style.price}>$10.00</Text>
+                    <Text style={style.description}>{product.description}</Text>
+                    <Text style={style.price}>${product.price}</Text>
                 </View>
             </TouchableOpacity>
         </View>
