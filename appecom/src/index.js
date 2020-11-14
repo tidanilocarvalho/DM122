@@ -1,9 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
+import style from './style'
+import { colors } from './styles'
 
 const AppECom = () => {
     return (
-        <View></View>
+        <SafeAreaView style={style.container}>
+            <StatusBar barStyle='light-content' backgroundColor={colors.base}/>
+        </SafeAreaView>
     );
 }
 
